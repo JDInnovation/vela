@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_hmpg.css">
+    <title>VELA</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image" href="">
+    <script src="https://kit.fontawesome.com/4a74bfd6d0.js" crossorigin="anonymous"></script>
+    <script src="contact.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/images/VELA Logo Black 3.png" alt="">
+        <ul class="menu">
+            <li> about us</li>
+            <li>our fleet</li>
+            <li>contacts</li>
+        </ul>
+    </header>
+    <!-- The Modal -->
+    <div id="quoteModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request quote</h2>
+            <p>Leave us your contact details and we'll get in touch to send you a quote.</p>
+            <!-- Start of Formspree form -->
+            <form id="quoteForm" action="https://formspree.io/f/mpzbpjdj" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit" id="submitBtn" class="pointer">SEND</button>
+            </form>
+            <!-- End of Formspree form -->
+        </div>
+    </div>
+    <section class="hero">
+        <h1 class="banner_txt">
+            luxury <br>
+            automotive
+        </h1>
+        <button class="quote_btn pointer" id="myBtn">REQUEST QUOTE</button>
+        <img class="hero_van" src="/images/van 3.png" alt="">
+
+    </section>
+    <div id="abt" class="abt">
+        <div class="abt_rot">
+            <p>about us</p>
+        </div>
+        <div class="abt_text">
+            <p>We a company dedicated to customize luxury vehicles so that you can make the most of your time or to
+                provide your clients with the best experience possible. <br><br>
+
+                Whatever is on your mind, we can do it! <br><br>
+
+                We believe that time is money so in our vehicles you’ll find everything you need to work while commuting
+                or so that you get ready on your way to that important meeting.<br><br>
+
+                You just want to relax? We’ve got you! You can keep up with that show you’ve been binge watching on
+                Netflix or play some playstation to blow off some steam. Your trips don’t have to be boring nor a waste
+                of time!<br><br>
+            </p>
+        </div>
+
+
+    </div>
+    <section class="fleet">
+        <div class="fleet_title">
+            <p>our fleet</p>
+        </div>
+        <div id="carousel1" class="carousel-container">
+            <div class="carousel">
+                <img src="/images/fleet1.jpg" alt="" draggable="false">
+                <img src="/images/fleet2.jpg" alt="" draggable="false">
+                <img src="/images/fleet1.jpg" alt="" draggable="false">
+                <img src="/images/fleet2.jpg" alt="" draggable="false">
+                <img src="/images/fleet2.jpg" alt="" draggable="false">
+                <img src="/images/fleet1.jpg" alt="" draggable="false">
+                <img src="/images/fleet2.jpg" alt="" draggable="false">
+            </div>
+
+            <div class="arrow-icons">
+                <i id="left" class="fas fa-chevron-left carousel-prev"></i>
+                <i id="right" class="fas fa-chevron-right carousel-next"></i>
+            </div>
+        </div>
+    </section>
+    <section class="offers">
+        <div class="offers_title">
+            <p>latest offers</p>
+        </div>
+        <div id="carousel2" class="carousel-container">
+            <div class="carousel">
+                <a href="/blh56.html">
+                    <div class="of_card">
+                        <img src="/images/of1.jpg" alt="" draggable="false">
+                        <h1>LUXURY VIP SPRINTER BLH56</h1>
+                        <span>€ 225 000,000</span>
+                        <div class="stat_card"> UNDER CONSTRUCTION</div>
+                    </div>
+                </a>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+            </div>
+
+            <div class="arrow-icons">
+                <i id="left" class="fas fa-chevron-left carousel-prev"></i>
+                <i id="right" class="fas fa-chevron-right carousel-next"></i>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact_rot">
+            <p>contact</p>
+        </div>
+        <div class="contact_form">
+            <form action="https://formspree.io/f/mpzbpjdj" method="POST" id="my-form">
+                <div class="form-group">
+                    <label for="firstName"></label>
+                    <input class="upform" type="text" id="name" name="name" placeholder="name">
+                    <label for="latsName"></label>
+                    <input class="upform left" type="text" id="phone" name="phone" placeholder="phone">
+                </div>
+                <div class="form-group ">
+                    <label for="email"></label>
+                    <input class="email" type="email" id="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="sub_btn pointer">SEND</button>
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="icons">
+            <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        </div>
+        <div class="copyright">
+            <p>© VELA 2023</p>
+        </div>
+
+
+    </section>
+    <script>
+        $(document).ready(function () {
+            function makeImageCarouselDraggable() {
+                const $carouselContent = $('#carousel1 .carousel');
+                const $arrowIcons = $('#carousel1 .arrow-icons i');
+                const $images = $carouselContent.find('img');
+
+                let isDragStart = false;
+                let prevPageX, prevScrollLeft;
+                let imageWidth = $images.first().outerWidth(true);
+
+                const showHideIcons = () => {
+                    $arrowIcons.first().toggle($carouselContent.scrollLeft() > 0);
+                    $arrowIcons.last().toggle($carouselContent.scrollLeft() < $carouselContent[0].scrollWidth - $carouselContent.innerWidth());
+                };
+
+                $arrowIcons.on('click', function () {
+                    const scrollAmount = $(this).hasClass('carousel-prev') ? -imageWidth : imageWidth;
+                    $carouselContent.animate({ scrollLeft: '+=' + scrollAmount }, 200, () => {
+                        showHideIcons();
+                    });
+                });
+
+                const dragStart = (e) => {
+                    isDragStart = true;
+                    prevPageX = e.pageX || e.originalEvent.touches[0].pageX;
+                    prevScrollLeft = $carouselContent.scrollLeft();
+                    $carouselContent.addClass("dragging");
+                };
+
+                const dragging = (e) => {
+                    if (!isDragStart) return;
+                    e.preventDefault();
+                    const positionDiff = ((e.pageX || e.originalEvent.touches[0].pageX) - prevPageX);
+                    $carouselContent.scrollLeft(prevScrollLeft - positionDiff);
+                };
+
+                const dragStop = () => {
+                    isDragStart = false;
+                    $carouselContent.removeClass("dragging");
+                };
+
+                $images.on('mousedown touchstart', dragStart);
+                $(document).on('mousemove touchmove', dragging);
+                $(document).on('mouseup touchend', dragStop);
+
+                // Ensure arrow icons are initially hidden for the first carousel
+                showHideIcons();
+            }
+
+            function makeCardCarouselDraggable() {
+                const $carouselContent = $('#carousel2 .carousel');
+                const $arrowIcons = $('#carousel2 .arrow-icons i');
+                const $cards = $carouselContent.find('.of_card');
+
+                let isDragStart = false;
+                let prevPageX, prevScrollLeft;
+                let cardWidth = $cards.first().outerWidth(true);
+
+                const showHideIcons = () => {
+                    $arrowIcons.first().toggle($carouselContent.scrollLeft() > 0);
+                    $arrowIcons.last().toggle($carouselContent.scrollLeft() < $carouselContent[0].scrollWidth - $carouselContent.innerWidth());
+                };
+
+                $arrowIcons.on('click', function () {
+                    const scrollAmount = $(this).hasClass('carousel-prev') ? -cardWidth : cardWidth;
+                    $carouselContent.animate({ scrollLeft: '+=' + scrollAmount }, 200, () => {
+                        showHideIcons();
+                    });
+                });
+
+                const dragStart = (e) => {
+                    isDragStart = true;
+                    prevPageX = e.pageX || e.originalEvent.touches[0].pageX;
+                    prevScrollLeft = $carouselContent.scrollLeft();
+                    $carouselContent.addClass("dragging");
+                };
+
+                const dragging = (e) => {
+                    if (!isDragStart) return;
+                    e.preventDefault();
+                    const positionDiff = ((e.pageX || e.originalEvent.touches[0].pageX) - prevPageX);
+                    $carouselContent.scrollLeft(prevScrollLeft - positionDiff);
+                };
+
+                const dragStop = () => {
+                    isDragStart = false;
+                    $carouselContent.removeClass("dragging");
+                };
+
+                $cards.on('mousedown touchstart', dragStart);
+                $(document).on('mousemove touchmove', dragging);
+                $(document).on('mouseup touchend', dragStop);
+
+                // Ensure arrow icons are initially hidden for the second carousel
+                showHideIcons();
+            }
+
+            // Call the functions to make each carousel draggable
+            makeImageCarouselDraggable();
+            makeCardCarouselDraggable();
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header'); // Adjust this if your header selector is different
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('quoteModal');
+        // Get the button that opens the modal
+        var btn = document.getElementById('myBtn');
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName('close')[0];
+        // Get the body element
+        var body = document.body;
+
+        // When the user clicks the button, open the modal and disable body scroll
+        btn.onclick = function () {
+            modal.style.display = 'block';
+            body.classList.add('body-no-scroll');
+        }
+
+        // When the user clicks on <span> (x), close the modal and enable body scroll
+        span.onclick = function () {
+            modal.style.display = 'none';
+            body.classList.remove('body-no-scroll');
+        }
+
+        // When the user clicks anywhere outside of the modal, close it and enable body scroll
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                body.classList.remove('body-no-scroll');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('quoteForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Change button text to indicate loading
+                var button = document.getElementById('submitBtn');
+                button.innerHTML = 'Sending...';
+
+                // Form data to be sent
+                var formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        // On success, change the button text to a thank you message
+                        button.innerHTML = 'Thank You!';
+                        // Optionally, disable the button
+                        button.disabled = true;
+                        // Clear the form fields
+                        form.reset();
+                    } else {
+                        // On failure, show an error message
+                        button.innerHTML = 'Error. Try again.';
+                        response.json().then(data => {
+                            if (data.errors) {
+                                // Display the first error message
+                                console.error(data.errors[0]);
+                            }
+                        });
+                    }
+                }).catch(error => {
+                    // On network error, show an error message
+                    button.innerHTML = 'Network Error. Try again.';
+                    console.error(error);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
