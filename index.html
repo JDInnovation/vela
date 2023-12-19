@@ -16,11 +16,11 @@
 
 <body>
     <header>
-        <img class="logo" src="/images/VELA Logo Black 3.png" alt="">
+        <a href="#"><img class="logo" src="/images/VELA Logo Black 3.png" alt=""></a>
         <ul class="menu">
-            <li> about us</li>
-            <li>our fleet</li>
-            <li>contacts</li>
+            <li><a href="#abt"> about us </a></li>
+            <li> <a href="#fleet">our fleet</a></li>
+            <li> <a href="#contact">contacts</a></li>
         </ul>
     </header>
     <!-- The Modal -->
@@ -46,7 +46,7 @@
     <section class="hero">
         <h1 class="banner_txt">
             luxury <br>
-            automotive
+            customs
         </h1>
         <button class="quote_btn pointer" id="myBtn">REQUEST QUOTE</button>
         <img class="hero_van" src="/images/van 3.png" alt="">
@@ -73,7 +73,7 @@
 
 
     </div>
-    <section class="fleet">
+    <section id="fleet" class="fleet">
         <div class="fleet_title">
             <p>our fleet</p>
         </div>
@@ -100,14 +100,14 @@
         </div>
         <div id="carousel2" class="carousel-container">
             <div class="carousel">
-                <a href="/blh56.html">
+               
                     <div class="of_card">
                         <img src="/images/of1.jpg" alt="" draggable="false">
                         <h1>LUXURY VIP SPRINTER BLH56</h1>
                         <span>€ 225 000,000</span>
                         <div class="stat_card"> UNDER CONSTRUCTION</div>
                     </div>
-                </a>
+               
                 <div class="of_card">
                     <img src="/images/of1.jpg" alt="" draggable="false">
                     <h1>LUXURY VIP SPRINTER BLH56</h1>
@@ -152,7 +152,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact_rot">
             <p>contact</p>
         </div>
@@ -372,6 +372,18 @@
                     // On network error, show an error message
                     button.innerHTML = 'Network Error. Try again.';
                     console.error(error);
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href="#abt"], a[href="#fleet"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var headerHeight = document.querySelector('header').offsetHeight;
+                    var targetSection = document.querySelector(this.getAttribute('href'));
+                    window.scrollTo(0, targetSection.offsetTop - headerHeight - 20);
                 });
             });
         });

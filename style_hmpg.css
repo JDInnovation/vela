@@ -43,6 +43,26 @@ header {
     line-height: 114.052%;
     /* 22.81px */
 }
+.menu li a {
+    text-decoration: none;
+    list-style: none;
+    color: #909DA5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+.menu li a:hover{
+    text-decoration: underline;
+}
+.quote_btn:hover{
+    transform: scale(105%);
+    transition: ease .5s;
+}
+.sub_btn:hover{
+    transform: scale(105%);
+    transition: ease .5s;
+}
 
 .hero {
     background: linear-gradient(0deg, #EDF1F3 0%, rgba(237, 241, 243, 0) 100%);
@@ -228,7 +248,7 @@ header {
     border-radius: 50%;
     position: absolute;
     transform: translateY(-500%);
-    z-index: 2;
+    z-index: 1;
 }
 
 .arrow-icons i:first-child {
@@ -637,11 +657,7 @@ textarea::placeholder {
     overflow: hidden;
     height: 100%; /* Prevents vertical movement */
   }
-@media screen and (min-width: 768px) { 
-    .scrolled {
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-}
+
 
 @media screen and (max-width: 900px) {
     .carousel img {
