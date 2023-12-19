@@ -187,16 +187,7 @@ header {
     /* Enable smooth scrolling on mobile */
     height: 400px;
 }
-.carousel {
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    display: flex;
-}
 
-#carousel1 img, #carousel2 .of_card {
-    scroll-snap-align: center;
-    /* Other styling as needed */
-}
 .carousel img {
     height: 340px;
     object-fit: cover;
@@ -802,6 +793,16 @@ textarea::placeholder {
     .contact_rot {
         left: 23px;
         top: 0;
+    }
+    .carousel {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        display: flex;
+    }
+    
+    #carousel1 img, #carousel2 .of_card {
+        scroll-snap-align: center;
+        /* Other styling as needed */
     }
 }
 
