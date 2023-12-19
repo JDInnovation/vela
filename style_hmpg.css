@@ -187,10 +187,12 @@ header {
     /* Enable smooth scrolling on mobile */
     height: 400px;
 }
-#carousel1, #carousel2 {
+.carousel {
     scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     display: flex;
 }
+
 #carousel1 img, #carousel2 .of_card {
     scroll-snap-align: center;
     /* Other styling as needed */
