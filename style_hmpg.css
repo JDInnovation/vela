@@ -48,6 +48,9 @@ header {
     background: linear-gradient(0deg, #EDF1F3 0%, rgba(237, 241, 243, 0) 100%);
     height: 100vh;
 }
+#quoteModal{
+    display: none;
+}
 
 .banner_txt {
     position: absolute;
