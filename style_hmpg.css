@@ -761,7 +761,7 @@ textarea::placeholder {
         padding-bottom: 36px;
     }
     .arrow-icons i:last-child{
-        display:none;
+        display:block;
     }
     .offers{
         padding-top: 36px;
@@ -820,10 +820,10 @@ textarea::placeholder {
         display: flex;
     }
     
-    #carousel1 img, #carousel2 .of_card {
+    /* #carousel1 img, #carousel2 .of_card {
         scroll-snap-align: center;
-        /* Other styling as needed */
-    }
+       Other styling as needed */
+     
 }
 
 /* Scrollbar Styles */
