@@ -806,9 +806,9 @@ textarea::placeholder {
         margin: 7px;
         height: 200px;
     }
-    .arrow-icons{
+    /* .arrow-icons{
         display: none;
-    }
+    } */
 
     .contact_rot {
         left: 23px;
