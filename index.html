@@ -345,41 +345,41 @@
     makeCarouselDraggable('#carousel2');
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const setupDraggableCarousel = (carouselId) => {
-        const carousel = document.getElementById(carouselId);
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+    function setupDraggableCarousel(carouselId) {
+        const carousel = document.querySelector(carouselId + ' .carousel');
+        let startX, scrollStart, isDown = false;
 
-        const startDragging = (e) => {
+        function onDragStart(e) {
             isDown = true;
             startX = e.pageX || e.touches[0].pageX;
-            scrollLeft = carousel.scrollLeft;
-        };
+            scrollStart = carousel.scrollLeft;
+            carousel.classList.add('dragging');
+        }
 
-        const stopDragging = (event) => {
-            isDown = false;
-        };
-
-        const moveCarousel = (e) => {
+        function onDragMove(e) {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX || e.touches[0].pageX;
-            const walk = (x - startX) * 3; // Scroll-fastness
-            carousel.scrollLeft = scrollLeft - walk;
-        };
+            const walk = (x - startX);
+            carousel.scrollLeft = scrollStart - walk;
+        }
 
-        carousel.addEventListener('mousedown', startDragging);
-        carousel.addEventListener('mouseleave', stopDragging);
-        carousel.addEventListener('mouseup', stopDragging);
-        carousel.addEventListener('mousemove', moveCarousel);
-        carousel.addEventListener('touchstart', startDragging);
-        carousel.addEventListener('touchend', stopDragging);
-        carousel.addEventListener('touchmove', moveCarousel);
-    };
+        function onDragEnd() {
+            isDown = false;
+            carousel.classList.remove('dragging');
+        }
 
-    setupDraggableCarousel('carousel1');
-    setupDraggableCarousel('carousel2');
+        carousel.addEventListener('mousedown', onDragStart);
+        carousel.addEventListener('mouseleave', onDragEnd);
+        carousel.addEventListener('mouseup', onDragEnd);
+        carousel.addEventListener('mousemove', onDragMove);
+        carousel.addEventListener('touchstart', onDragStart, { passive: false });
+        carousel.addEventListener('touchend', onDragEnd);
+        carousel.addEventListener('touchmove', onDragMove, { passive: false });
+    }
+
+    setupDraggableCarousel('#carousel1');
+    setupDraggableCarousel('#carousel2');
 });</script>
 </body>
 
