@@ -188,6 +188,9 @@ header {
     max-width: 120vw;
     position: relative;
 }
+.carousel:active {
+    cursor: grabbing;
+}
 
 .carousel {
     position: relative;
@@ -206,6 +209,7 @@ header {
     -webkit-overflow-scrolling: touch;
     /* Enable smooth scrolling on mobile */
     height: 400px;
+    user-select: none;
 }
 
 .carousel img {
@@ -252,7 +256,7 @@ header {
 }
 
 .arrow-icons i:first-child {
-    display: none;
+    
     left: 20px;
 }
 

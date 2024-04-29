@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/4a74bfd6d0.js" crossorigin="anonymous"></script>
     <script src="contact.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             customs
         </h1>
         <button class="quote_btn pointer" id="myBtn">REQUEST QUOTE</button>
-        <img class="hero_van" src="/images/van 3.png" alt="">
+        <img class="hero_van" src="/images/teste3.png" alt="">
 
     </section>
     <div id="abt" class="abt">
@@ -94,7 +95,7 @@
             </div>
         </div>
     </section>
-    <section class="offers">
+    <!-- <section class="offers">
         <div class="offers_title">
             <p>latest offers</p>
         </div>
@@ -151,7 +152,7 @@
                 <i id="right" class="fas fa-chevron-right carousel-next"></i>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="contact" class="contact">
         <div class="contact_rot">
             <p>contact</p>
@@ -187,109 +188,7 @@
 
 
     </section>
-    <!-- <script>
-        $(document).ready(function () {
-            function makeImageCarouselDraggable() {
-                const $carouselContent = $('#carousel1 .carousel');
-                const $arrowIcons = $('#carousel1 .arrow-icons i');
-                const $images = $carouselContent.find('img');
-
-                let isDragStart = false;
-                let prevPageX, prevScrollLeft;
-                let imageWidth = $images.first().outerWidth(true);
-
-                const showHideIcons = () => {
-                    $arrowIcons.first().toggle($carouselContent.scrollLeft() > 0);
-                    $arrowIcons.last().toggle($carouselContent.scrollLeft() < $carouselContent[0].scrollWidth - $carouselContent.innerWidth());
-                };
-
-                $arrowIcons.on('click', function () {
-                    const scrollAmount = $(this).hasClass('carousel-prev') ? -imageWidth : imageWidth;
-                    $carouselContent.animate({ scrollLeft: '+=' + scrollAmount }, 200, () => {
-                        showHideIcons();
-                    });
-                });
-
-                const dragStart = (e) => {
-                    isDragStart = true;
-                    prevPageX = e.pageX || e.originalEvent.touches[0].pageX;
-                    prevScrollLeft = $carouselContent.scrollLeft();
-                    $carouselContent.addClass("dragging");
-                };
-
-                const dragging = (e) => {
-                    if (!isDragStart) return;
-                    e.preventDefault();
-                    const positionDiff = ((e.pageX || e.originalEvent.touches[0].pageX) - prevPageX);
-                    $carouselContent.scrollLeft(prevScrollLeft - positionDiff);
-                };
-
-                const dragStop = () => {
-                    isDragStart = false;
-                    $carouselContent.removeClass("dragging");
-                };
-
-                $images.on('mousedown touchstart', dragStart);
-                $(document).on('mousemove touchmove', dragging);
-                $(document).on('mouseup touchend', dragStop);
-
-                // Ensure arrow icons are initially hidden for the first carousel
-                showHideIcons();
-            }
-
-            function makeCardCarouselDraggable() {
-                const $carouselContent = $('#carousel2 .carousel');
-                const $arrowIcons = $('#carousel2 .arrow-icons i');
-                const $cards = $carouselContent.find('.of_card');
-
-                let isDragStart = false;
-                let prevPageX, prevScrollLeft;
-                let cardWidth = $cards.first().outerWidth(true);
-
-                const showHideIcons = () => {
-                    $arrowIcons.first().toggle($carouselContent.scrollLeft() > 0);
-                    $arrowIcons.last().toggle($carouselContent.scrollLeft() < $carouselContent[0].scrollWidth - $carouselContent.innerWidth());
-                };
-
-                $arrowIcons.on('click', function () {
-                    const scrollAmount = $(this).hasClass('carousel-prev') ? -cardWidth : cardWidth;
-                    $carouselContent.animate({ scrollLeft: '+=' + scrollAmount }, 200, () => {
-                        showHideIcons();
-                    });
-                });
-
-                const dragStart = (e) => {
-                    isDragStart = true;
-                    prevPageX = e.pageX || e.originalEvent.touches[0].pageX;
-                    prevScrollLeft = $carouselContent.scrollLeft();
-                    $carouselContent.addClass("dragging");
-                };
-
-                const dragging = (e) => {
-                    if (!isDragStart) return;
-                    e.preventDefault();
-                    const positionDiff = ((e.pageX || e.originalEvent.touches[0].pageX) - prevPageX);
-                    $carouselContent.scrollLeft(prevScrollLeft - positionDiff);
-                };
-
-                const dragStop = () => {
-                    isDragStart = false;
-                    $carouselContent.removeClass("dragging");
-                };
-
-                $cards.on('mousedown touchstart', dragStart);
-                $(document).on('mousemove touchmove', dragging);
-                $(document).on('mouseup touchend', dragStop);
-
-                // Ensure arrow icons are initially hidden for the second carousel
-                showHideIcons();
-            }
-
-            // Call the functions to make each carousel draggable
-            makeImageCarouselDraggable();
-            makeCardCarouselDraggable();
-        });
-    </script> -->
+   
     <script>
         window.addEventListener('scroll', function () {
             var header = document.querySelector('header'); // Adjust this if your header selector is different
@@ -388,44 +287,100 @@
             });
         });
     </script>
-    <script>$(document).ready(function () {
-            const makeCarouselDraggable = (carouselId) => {
-                const $carouselContent = $(`${carouselId} .carousel`);
-                const $arrowIcons = $(`${carouselId} .arrow-icons i`);
-                const itemWidth = $carouselContent.find('img, .of_card').first().outerWidth(true);
+    <script>$(document).ready(function() {
+        function setupCarousel(carouselId) {
+            const $carousel = $(`${carouselId} .carousel`);
+            const $leftArrow = $(`${carouselId} .carousel-prev`);
+            const $rightArrow = $(`${carouselId} .carousel-next`);
+    
+            function updateArrowVisibility() {
+                const maxScrollLeft = $carousel[0].scrollWidth - $carousel.outerWidth();
+                $leftArrow.css('visibility', $carousel.scrollLeft() > 0 ? 'visible' : 'hidden');
+                $rightArrow.css('visibility', $carousel.scrollLeft() < maxScrollLeft ? 'visible' : 'hidden');
+            }
+    
+            $carousel.on('scroll', updateArrowVisibility);
+    
+            $leftArrow.click(function() {
+                $carousel.animate({ scrollLeft: '-=' + $carousel.width() }, 'slow', updateArrowVisibility);
+            });
+    
+            $rightArrow.click(function() {
+                $carousel.animate({ scrollLeft: '+=' + $carousel.width() }, 'slow', updateArrowVisibility);
+            });
+    
+            updateArrowVisibility(); // Initial check to set visibility correctly
+        }
+    
+        setupCarousel('#carousel1');
+        setupCarousel('#carousel2');
+    });
+    $(document).ready(function() {
+    function makeCarouselDraggable(carouselId) {
+        const $carousel = $(`${carouselId} .carousel`);
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
 
-                let isDragging = false;
-                let startPageX, startScrollLeft;
+        $carousel.on('mousedown touchstart', function(e) {
+            isDragging = true;
+            startX = e.pageX || e.originalEvent.touches[0].pageX;
+            scrollLeft = this.scrollLeft;
+            e.preventDefault();
+        });
 
-                const updateScrollPosition = (pageX) => {
-                    const positionDiff = startPageX - pageX;
-                    $carouselContent.scrollLeft(startScrollLeft + positionDiff);
-                };
+        $(document).on('mousemove touchmove', function(e) {
+            if (!isDragging) return;
+            const x = e.pageX || e.originalEvent.touches[0].pageX;
+            const walk = (x - startX); // Adjust for sensitivity, maybe multiply by a factor
+            $carousel.scrollLeft(scrollLeft - walk);
+        });
 
-                $carouselContent.on('mousedown touchstart', function (e) {
-                    isDragging = true;
-                    startPageX = e.pageX || e.originalEvent.touches[0].pageX;
-                    startScrollLeft = $carouselContent.scrollLeft();
-                });
+        $(document).on('mouseup touchend', function() {
+            isDragging = false;
+        });
+    }
 
-                $(document).on('mousemove touchmove', function (e) {
-                    if (!isDragging) return;
-                    e.preventDefault();
-                    requestAnimationFrame(() => updateScrollPosition(e.pageX || e.originalEvent.touches[0].pageX));
-                });
+    makeCarouselDraggable('#carousel1');
+    makeCarouselDraggable('#carousel2');
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const setupDraggableCarousel = (carouselId) => {
+        const carousel = document.getElementById(carouselId);
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-                $(document).on('mouseup touchend', function () {
-                    isDragging = false;
-                });
+        const startDragging = (e) => {
+            isDown = true;
+            startX = e.pageX || e.touches[0].pageX;
+            scrollLeft = carousel.scrollLeft;
+        };
 
+        const stopDragging = (event) => {
+            isDown = false;
+        };
 
-                // ... rest of the code (arrow icon functionality)
-            };
+        const moveCarousel = (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX || e.touches[0].pageX;
+            const walk = (x - startX) * 3; // Scroll-fastness
+            carousel.scrollLeft = scrollLeft - walk;
+        };
 
-            // Initialize both carousels
-            makeCarouselDraggable('#carousel1');
-            makeCarouselDraggable('#carousel2');
-        });</script>
+        carousel.addEventListener('mousedown', startDragging);
+        carousel.addEventListener('mouseleave', stopDragging);
+        carousel.addEventListener('mouseup', stopDragging);
+        carousel.addEventListener('mousemove', moveCarousel);
+        carousel.addEventListener('touchstart', startDragging);
+        carousel.addEventListener('touchend', stopDragging);
+        carousel.addEventListener('touchmove', moveCarousel);
+    };
+
+    setupDraggableCarousel('carousel1');
+    setupDraggableCarousel('carousel2');
+});</script>
 </body>
 
 </html>
