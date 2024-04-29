@@ -806,9 +806,9 @@ textarea::placeholder {
         margin: 7px;
         height: 200px;
     }
-    /* .arrow-icons{
+     .arrow-icons{
         display: none;
-    } */
+    } 
 
     .contact_rot {
         left: 23px;
@@ -820,9 +820,9 @@ textarea::placeholder {
         display: flex;
     }
     
-    /* #carousel1 img, #carousel2 .of_card {
+     #carousel1 img, #carousel2 .of_card {
         scroll-snap-align: center;
-       Other styling as needed */
+       
      
 }
 
