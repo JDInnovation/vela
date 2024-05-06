@@ -205,7 +205,6 @@ header {
     white-space: nowrap;
     overflow: hidden;
     scroll-behavior: smooth;
-    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     /* Enable smooth scrolling on mobile */
     height: 400px;
