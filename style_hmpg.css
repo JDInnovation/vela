@@ -10,6 +10,14 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     background-color: white;
+    /* Selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
 }
 .pointer{
     cursor: pointer;
@@ -857,7 +865,7 @@ textarea::placeholder {
 
     .contact_rot {
         left: 23px;
-        top: 0;
+        top: 15px;
     }
     .carousel {
         scroll-snap-type: x mandatory;
