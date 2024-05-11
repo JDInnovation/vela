@@ -121,8 +121,8 @@ header {
     z-index: 1; /* Garante que o conteúdo esteja acima do gradiente e dos vídeos */
     color: white;
     text-align: center;
-    top: 25vh;
-    left: 10vh;
+    top: 45vh;
+    left: 12vh;
     transform: translate(-50%, -50%);
     max-width: 80%;
 }
