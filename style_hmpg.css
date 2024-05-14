@@ -25,7 +25,7 @@ body {
 
 header {
     display: flex;
-    padding: 29px 85px;
+    padding: 10px 85px;
     justify-content: space-between;
     position: fixed;
     z-index: 2;
@@ -841,6 +841,10 @@ textarea::placeholder {
         justify-content: center;
         position: relative;
         background-color: transparent;
+        padding: 0px 85px;
+    }
+    header a img {
+        height:30px;
     }
     
 
