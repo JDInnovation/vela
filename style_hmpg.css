@@ -841,7 +841,7 @@ textarea::placeholder {
         justify-content: center;
         position: relative;
         background-color: transparent;
-        padding: 0px 85px;
+        padding: 8px 85px;
     }
     header a img {
         height:40px;
