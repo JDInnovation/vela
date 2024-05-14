@@ -13,6 +13,8 @@
     <script src="contact.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@
         </div>
 
     </section>
-    <div id="abt" class="abt">
+    <div data-aos="fade-up" data-aos-duration="1000" id="abt" class="abt">
         <div class="abt_rot">
             <p>about us</p>
         </div>
@@ -92,7 +94,7 @@
 
 
     </div>
-    <section id="fleet" class="fleet">
+    <section data-aos="fade-up" data-aos-duration="1000" id="fleet" class="fleet">
         <div class="fleet_title">
             <p>our fleet</p>
         </div>
@@ -198,20 +200,20 @@
         </div>
     </section> -->
     <section id="rent" class="rent">
-        <div class="rent_title">
+        <div data-aos="fade-up" data-aos-duration="1000" class="rent_title">
 <p>rent your VELA</p>
         </div>
-        <div class="rent_buttons">
+        <div data-aos="fade-up" data-aos-duration="1000" class="rent_buttons">
             <a href="tel:+351911033748"><i class="fa fa-phone" aria-hidden="true"></i><span>+351 911033748 </span></a>
             <a href="https://wa.me/351911033748"><span><i class="fa fa-whatsapp" aria-hidden="true"></i>send message</span></a>
         </div>
 
     </section>
     <section id="contact" class="contact">
-        <div class="contact_rot">
+        <div  data-aos="fade-up" data-aos-duration="1000" class="contact_rot">
             <p>contact</p>
         </div>
-        <div class="contact_form">
+        <div data-aos="fade-up" data-aos-duration="1000" class="contact_form">
             <form action="https://formspree.io/f/mpzbpjdj" method="POST" id="my-form">
                 <div class="form-group">
                     <label for="firstName"></label>
@@ -452,6 +454,9 @@ document.addEventListener('DOMContentLoaded', function() {
     setupDraggableCarousel('carousel1');
     setupDraggableCarousel('carousel2');
 });</script>
+<script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
