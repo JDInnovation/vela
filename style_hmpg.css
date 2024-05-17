@@ -232,7 +232,7 @@ header a img {
 .abt {
     position: relative;
     width: 100vw;
-    height: 480px;
+    height: 450px;
     background: #ffffff;
     display: flex;
     justify-content: center;
@@ -876,7 +876,7 @@ textarea::placeholder {
         font-weight: 600;
         line-height: 84.552%;
         text-align: left;
-        left: 6vh;   
+        left: 16vw;   
        
     }
 
@@ -907,8 +907,8 @@ textarea::placeholder {
 
     .quote_btn {
         position: relative;
-        top: 20vh;
-        left: 6vh;
+        top: 150px;
+        left: 16vw;
     }
 
     .hero {
