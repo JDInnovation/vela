@@ -21,10 +21,19 @@
     <header>
         <a href="#"><img class="logo" src="/images/VELA Logo Black 1.2_.png" alt=""></a>
         <ul class="menu">
-            <li><a href="#abt"> about us </a></li>
-            <li> <a href="#fleet">our fleet</a></li>
-            <li> <a href="#rent">rent</a></li>
-            <li> <a href="#contact">contacts</a></li>
+            <li><a href="#abt"> About Us </a></li>
+            <li> <a href="#fleet">Our Fleet</a></li>
+            <li> <a href="#rent">Rent</a></li>
+            <li> <a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="#abt"> About Us </a></li>
+            <li> <a href="#fleet">Our Fleet</a></li>
+            <li> <a href="#rent">Rent</a></li>
+            <li> <a href="#contact">Contact</a></li>
         </ul>
     </header>
     <!-- The Modal -->
@@ -64,8 +73,8 @@
             <div class="gradient-overlay"></div>
             <div class="content">
                 <h1 class="banner_txt">
-                    luxury <br>
-                    customs
+                    Luxury <br>
+                    Customs
                 </h1>
                 <button class="quote_btn pointer" id="myBtn">REQUEST QUOTE</button>
 
@@ -75,7 +84,7 @@
     </section>
     <div data-aos="fade-up" data-aos-duration="1000" id="abt" class="abt">
         <div class="abt_rot">
-            <p>about us</p>
+            <p>About us</p>
         </div>
         <div class="abt_text">
             <p>Our company is dedicated to customized luxury vehicles that can help you make the most of your time and/or provide your clients with the best experience possible. <br><br>
@@ -89,7 +98,7 @@
     </div>
     <section data-aos="fade-up" data-aos-duration="1000" id="fleet" class="fleet">
         <div class="fleet_title">
-            <p>our fleet</p>
+            <p>Our fleet</p>
         </div>
         <div id="carousel1" class="carousel-container">
             <div class="carousel">
@@ -194,7 +203,7 @@
     </section> -->
     <section id="rent" class="rent">
         <div data-aos="fade-up" data-aos-duration="1000" class="rent_title">
-<p>rent your VELA</p>
+<p>Rent your VELA</p>
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="rent_buttons">
             <a href="tel:+351911033748"><i class="fa fa-phone" aria-hidden="true"></i><span>+351 911033748 </span></a>
@@ -204,7 +213,7 @@
     </section>
     <section id="contact" class="contact">
         <div  data-aos="fade-up" data-aos-duration="1000" class="contact_rot">
-            <p>contact</p>
+            <p>Contact</p>
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="contact_form">
             <form action="https://formspree.io/f/mpzbpjdj" method="POST" id="my-form">
@@ -449,6 +458,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });</script>
 <script>
     AOS.init();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+    });
+});
   </script>
 </body>
 
