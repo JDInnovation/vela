@@ -460,12 +460,22 @@ document.addEventListener('DOMContentLoaded', function() {
     AOS.init();
   </script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
 
     hamburger.addEventListener('click', function () {
         mobileMenu.classList.toggle('active');
+        body.classList.toggle('body-no-scroll');
+    });
+
+    // Close mobile menu when a link is clicked and enable body scroll
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            body.classList.remove('body-no-scroll');
+        });
     });
 });
   </script>
